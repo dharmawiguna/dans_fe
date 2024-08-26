@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
+// import Form from "./components/Form";
 
-function App() {
+// function App() {
+//   return (
+//     <div className="flex w-full h-screen">
+//       <div className="w-full flex items-center justify-center lg:w-1/2">
+//         <Form />
+//       </div>
+//       <div className="hidden relative lg:flex h-full w-1/2 items-center justify-center bg-gray-200">
+//         <div className="w-60 h-60 bg-gradient-to-tr from-violet-500 to-pink-500 rounded-full animate-bounce" />
+//         <div className="w-full h-1/2 absolute bottom-0 bg-white/10 backdrop-blur-lg " />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// src/App.js
+
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Navigate from="*" to="/" /> */}
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
